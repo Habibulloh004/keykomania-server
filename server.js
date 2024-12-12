@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import { StreamClient } from "@stream-io/node-sdk";
 import Stripe from "stripe";
+import bodyParser from "body-parser";
 
 const app = express();
 

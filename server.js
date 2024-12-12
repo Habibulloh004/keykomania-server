@@ -8,6 +8,7 @@ import dotenv from 'dotenv'
 const app = express();
 
 dotenv.config()
+port= 5000
 
 const streamClient = new StreamClient(process.env.STREAM_API_KEY, process.env.STREAM_API_SECRET);
 const stripe = Stripe(process.env.STRIPE_API_KEY);

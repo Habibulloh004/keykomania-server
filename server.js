@@ -3,14 +3,17 @@ import cors from "cors";
 import { StreamClient } from "@stream-io/node-sdk";
 import Stripe from "stripe";
 import bodyParser from "body-parser";
-import dotenv from 'dotenv'
+import dotenv from "dotenv";
 
 const app = express();
 
-dotenv.config()
-port= 5000
+dotenv.config();
+const port = 5000;
 
-const streamClient = new StreamClient(process.env.STREAM_API_KEY, process.env.STREAM_API_SECRET);
+const streamClient = new StreamClient(
+  process.env.STREAM_API_KEY,
+  process.env.STREAM_API_SECRET
+);
 const stripe = Stripe(process.env.STRIPE_API_KEY);
 
 // Middleware to parse JSON requests

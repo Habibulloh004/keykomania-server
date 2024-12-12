@@ -29,6 +29,14 @@ app.get("/", (req, res) => {
   res.send("Hello, World!");
 });
 
+app.get("/api", (req, res) => {
+  const expirationTime = Math.floor(Date.now() / 1000) + 3600;
+  const issuedAt = Math.floor(Date.now() / 1000) - 60;
+
+  const token = streamClient.createToken("fikserr", expirationTime, issuedAt);
+  res.json(token);
+});
+
 app.post("/user", (req, res) => {
   try {
     const nameUser = req.body?.name;

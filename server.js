@@ -24,7 +24,7 @@ app.use(
       "http://localhost:5173",
       "http://localhost:5174",
       "https://spiffy-kleicha-f5c1db.netlify.app",
-      "https://spiffy-kleicha-f5c1db.netlify.app",
+      "https://keykomania-zbr3.vercel.app",
     ],
   })
 );
